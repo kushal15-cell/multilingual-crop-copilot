@@ -1,0 +1,13 @@
+{
+    "prepared_at_utc":  "2026-09-03T08:48:31.3353308Z",
+    "checkpoint_sha256":  "DDB326694A2CCD928D1FD423F6EB63408DFF1C0626FBF44A3107B91E76F82A5A",
+    "test_accuracy":  0.5294117647058824,
+    "test_macro_f1":  0.5094363091086237,
+    "ece":  0.10814236104488373,
+    "coverage_at_0_65":  0.2647058823529412,
+    "selective_accuracy_at_0_65":  0.8333333333333334,
+    "market_data_source":  "synthetic_demo_v2",
+    "market_data_is_synthetic":  true,
+    "markets":  7,
+    "demo_cases":  4
+}

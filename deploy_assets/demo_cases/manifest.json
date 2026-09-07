@@ -1,0 +1,54 @@
+{
+  "description": "Curated, held-out PlantDoc test cases for a reproducible demo.",
+  "confidence_threshold": 0.65,
+  "cases": [
+    {
+      "id": "human_review",
+      "title": "Human-review gate (dosage question)",
+      "filename": "human_review.jpg",
+      "source": "official_plantdoc_test",
+      "seen_during_training": false,
+      "true_label": "Tomato leaf late blight",
+      "measured_prediction": "Tomato leaf late blight",
+      "measured_confidence": 0.990918,
+      "measured_correct": true,
+      "recommended_question": "Which pesticide should I spray, and what exact dosage should I use?"
+    },
+    {
+      "id": "confidence_review",
+      "title": "Confidence-band review",
+      "filename": "confidence_review.jpg",
+      "source": "official_plantdoc_test",
+      "seen_during_training": false,
+      "true_label": "Tomato leaf late blight",
+      "measured_prediction": "Tomato leaf late blight",
+      "measured_confidence": 0.724501,
+      "measured_correct": true,
+      "recommended_question": "What should I do next to protect this crop?"
+    },
+    {
+      "id": "safe_abstention",
+      "title": "Safe abstention",
+      "filename": "safe_abstention.jpg",
+      "source": "official_plantdoc_test",
+      "seen_during_training": false,
+      "true_label": "Tomato Septoria leaf spot",
+      "measured_prediction": "Tomato Early blight leaf",
+      "measured_confidence": 0.208009,
+      "measured_correct": false,
+      "recommended_question": "What disease is this, and what should I do next?"
+    },
+    {
+      "id": "healthy_leaf",
+      "title": "Healthy-leaf example",
+      "filename": "healthy_leaf.jpg",
+      "source": "official_plantdoc_test",
+      "seen_during_training": false,
+      "true_label": "Tomato leaf",
+      "measured_prediction": "Tomato leaf",
+      "measured_confidence": 0.876021,
+      "measured_correct": true,
+      "recommended_question": "Does this leaf show a supported disease?"
+    }
+  ]
+}

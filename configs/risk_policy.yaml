@@ -1,0 +1,37 @@
+always_review_categories:
+  - pesticide
+  - fungicide
+  - insecticide
+  - herbicide
+  - dosage
+  - mixing
+  - application_frequency
+  - pre_harvest_interval
+  - restricted_chemical
+review_terms:
+  - pesticide
+  - fungicide
+  - insecticide
+  - herbicide
+  - spray
+  - dosage
+  - dose
+  - ml per litre
+  - ml/l
+  - gram per litre
+  - g/l
+  - mix with
+  - apply every
+  - waiting period
+  - withholding period
+  - ಕೀಟನಾಶಕ
+  - ಶಿಲೀಂಧ್ರನಾಶಕ
+  - ಪ್ರಮಾಣ
+  - छिड़काव
+  - कीटनाशक
+  - फफूंदनाशक
+  - खुराक
+quantity_pattern: '(?i)\b\d+(?:\.\d+)?\s*(?:ml|millilit(?:er|re)|g|gram|kg|lit(?:er|re)|%)\b'
+low_confidence_threshold: 0.65
+expert_review_confidence_threshold: 0.80
+

@@ -1,0 +1,51 @@
+- id: tomato_early_blight_general
+  crop: tomato
+  disease: tomato_early_blight
+  aliases: [tomato_leaf_early_blight, tomato_early_blight_leaf]
+  languages: [en, kn, hi]
+  text: >-
+    Remove severely affected fallen leaves where locally appropriate, avoid working among wet
+    plants, improve airflow, avoid splashing soil onto foliage, and monitor nearby plants.
+    Confirm the diagnosis with a local agricultural expert before any chemical treatment.
+  source_title: Example record requiring agronomist validation
+  source_url: null
+  expert_validated: false
+
+- id: tomato_late_blight_general
+  crop: tomato
+  disease: tomato_late_blight
+  aliases: [tomato_leaf_late_blight, tomato_late_blight_leaf]
+  languages: [en, kn, hi]
+  text: >-
+    Separate visibly affected plant material where locally appropriate, avoid overhead watering,
+    document how quickly symptoms spread, and seek urgent local expert confirmation because similar
+    symptoms can have different causes. Do not compost suspect material without local guidance.
+  source_title: Example record requiring agronomist validation
+  source_url: null
+  expert_validated: false
+
+- id: tomato_generic_disease_safety
+  crop: tomato
+  disease: any
+  aliases: []
+  languages: [en, kn, hi]
+  text: >-
+    Isolate the diagnostic question from treatment decisions. Photograph both sides of affected
+    leaves, stems, fruit, and nearby plants; record symptom spread and recent weather; and obtain
+    local expert confirmation before applying any chemical treatment. Similar visual symptoms can
+    have different biological, nutrient, or environmental causes.
+  source_title: Generic safety record requiring agronomist validation
+  source_url: null
+  expert_validated: false
+
+- id: healthy_or_uncertain
+  crop: any
+  disease: healthy
+  languages: [en, kn, hi]
+  text: >-
+    A photograph alone cannot confirm that a crop is healthy. Continue monitoring both sides of
+    leaves, stems, and nearby plants. Record symptom changes and obtain expert assessment if wilting,
+    rapid spread, fruit damage, or major discoloration appears.
+  source_title: Safety guidance
+  source_url: null
+  expert_validated: false

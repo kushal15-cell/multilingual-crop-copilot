@@ -1,0 +1,10 @@
+.git
+.env
+.venv
+**/__pycache__
+.streamlit/secrets.toml
+artifacts
+data/raw
+data/processed
+deploy_assets/*.sqlite3*
+deploy_assets/*.jsonl

@@ -1,0 +1,6 @@
+prepare:
+  seed: 42
+  val_ratio: 0.15
+  label_regex: tomato
+price:
+  test_days: 30

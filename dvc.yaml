@@ -1,0 +1,56 @@
+stages:
+  prepare_images:
+    cmd: >-
+      python scripts/prepare_official_plantdoc.py
+      --source data/raw/plantdoc-official
+      --output data/processed/plantdoc
+      --seed ${prepare.seed}
+      --val-ratio ${prepare.val_ratio}
+      --label-regex ${prepare.label_regex}
+    deps:
+      - scripts/prepare_official_plantdoc.py
+      - data/raw/plantdoc-official
+    params:
+      - prepare
+    outs:
+      - data/processed/plantdoc
+
+  train_cv:
+    cmd: python -m crop_copilot.cv.train --config configs/training_real.yaml
+    deps:
+      - src/crop_copilot/cv
+      - data/processed/plantdoc/train
+      - data/processed/plantdoc/val
+      - configs/training_real.yaml
+    outs:
+      - artifacts/cv/best_model.pt
+      - artifacts/cv/class_names.json
+    metrics:
+      - artifacts/cv/train_metrics.json
+
+  evaluate_cv:
+    cmd: python -m crop_copilot.cv.evaluate --checkpoint artifacts/cv/best_model.pt --data-dir data/processed/plantdoc/test
+    deps:
+      - src/crop_copilot/cv/evaluate.py
+      - artifacts/cv/best_model.pt
+      - data/processed/plantdoc/test
+    metrics:
+      - artifacts/cv/test_metrics.json
+    plots:
+      - artifacts/cv/confusion_matrix.csv
+
+  train_price:
+    cmd: >-
+      python -m crop_copilot.tabular.train_price_model
+      --input data/processed/market_prices.csv
+      --output artifacts/price/price_forecaster.joblib
+      --test-days ${price.test_days}
+    deps:
+      - src/crop_copilot/tabular
+      - data/processed/market_prices.csv
+    params:
+      - price
+    outs:
+      - artifacts/price/price_forecaster.joblib
+    metrics:
+      - artifacts/price/metrics.json

@@ -1,0 +1,15 @@
+data_dir: data/processed/plantdoc
+output_dir: artifacts/cv
+model_name: efficientnet_b0
+image_size: 224
+batch_size: 4
+gradient_accumulation_steps: 4
+epochs: 25
+learning_rate: 0.0002
+weight_decay: 0.0001
+patience: 6
+num_workers: 0
+seed: 42
+pretrained: true
+label_smoothing: 0.1
+resume: true
